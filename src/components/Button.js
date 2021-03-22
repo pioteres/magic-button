@@ -1,6 +1,6 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, forwardRef } from 'react';
 
-const Button = () => {
+const Button = forwardRef((props, ref) => {
 
   const btn = useRef();
 
@@ -21,6 +21,6 @@ const Button = () => {
   return (
     <button ref={btn} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Click Me!</button>
   )
-}
+});
 
 export default Button;
