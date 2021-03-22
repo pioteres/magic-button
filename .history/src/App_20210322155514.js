@@ -1,20 +1,19 @@
-import React, { createRef} from 'react';
+import React, { createRef, forwardRef} from 'react';
 import Button from './components/Button';
 import ForwardButton from './components/ForwardButton';
 import './App.css';
+
+
 
 function App() {
   const btnRef = createRef();
   const handleMouseEnter = (e) => {
     e.currentTarget.style.background="green";
   }
-  const handleMouseLeave = (e) => {
-    e.currentTarget.style.background="lightblue";
-  }
   return (
     <div className="App">
       <Button />
-      <ForwardButton ref={btnRef} {...{handleMouseEnter, handleMouseLeave}}>Click me!</ForwardButton>
+      <ForwardButton ref={ref} onMouseEnter={handleMouseEnter}>Click me!</ForwardButton>
 
     </div>
   );

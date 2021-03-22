@@ -8,13 +8,10 @@ function App() {
   const handleMouseEnter = (e) => {
     e.currentTarget.style.background="green";
   }
-  const handleMouseLeave = (e) => {
-    e.currentTarget.style.background="lightblue";
-  }
   return (
     <div className="App">
       <Button />
-      <ForwardButton ref={btnRef} {...{handleMouseEnter, handleMouseLeave}}>Click me!</ForwardButton>
+      <ForwardButton ref={btnRef} onMouseEnter={handleMouseEnter}>Click me!</ForwardButton>
 
     </div>
   );

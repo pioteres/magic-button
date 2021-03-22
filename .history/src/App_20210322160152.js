@@ -9,7 +9,7 @@ function App() {
     e.currentTarget.style.background="green";
   }
   const handleMouseLeave = (e) => {
-    e.currentTarget.style.background="lightblue";
+    e.currentTarget.style.background="red";
   }
   return (
     <div className="App">

@@ -8,9 +8,6 @@ function App() {
   const handleMouseEnter = (e) => {
     e.currentTarget.style.background="green";
   }
-  const handleMouseLeave = (e) => {
-    e.currentTarget.style.background="lightblue";
-  }
   return (
     <div className="App">
       <Button />
